@@ -1,0 +1,303 @@
+body {
+  background-color: #1E1E1E;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container>section {
+  height: 100vh;
+  scroll-snap-align: start;
+  /* 각 섹션이 시작점에서 스냅 */
+}
+
+#header {
+  background-color: #1E1E1E;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  height: 15vh;
+  border-bottom: solid whitesmoke 2px;
+  margin-left: 10vw;
+  z-index: 100;
+}
+
+.header-title {
+  width: 15%;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5em;
+  color: white;
+  margin-left: 3vw;
+}
+
+.header-title a {
+  color: white;
+  text-decoration: none;
+}
+.sub-menu {
+  width: 20%;
+  color: white;
+  margin-right: 3vw;
+}
+
+.sub-menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.sub-menu ul a {
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-first {
+  padding-top: 50vh;
+  padding-left: 13vw;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4em;
+  color: white;
+}
+
+.main-second {
+  margin-left: 13vw;
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 5em;
+  color: white;
+}
+
+.scroll-down {
+  padding-top: 8vh;
+  padding-left: 100vw;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll {
+  width: 2rem;
+  height: 4rem;
+  border: solid white 2px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll span {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: white;
+  display: block;
+  animation: cursor 1.15s linear infinite;
+}
+
+.arrow-down {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: solid 2px transparent;
+  border-right-color: white;
+  border-bottom-color: white;
+  transform: rotate(45deg);
+  margin-top: 0.3rem;
+  animation: arrow 1.15s linear infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#about {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.about-title {
+  padding-top: 25vh;
+  padding-left: 13vw;
+  text-align: center;
+}
+
+.name {
+  display: inline;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.about-list {
+  padding-top: 23vh;
+  padding-left: 13vw;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#about ul {
+  list-style: none;
+}
+
+#about ul ul {
+  list-style: circle;
+}
+
+#about img {
+  width: 35vh;
+  height: 45vh;
+  border-radius: 50%;
+}
+
+#skills {
+  width: 100vw;
+  height: 100vh;
+}
+.skill-list {
+  padding-top: 23vh;
+  padding-left: 13vw;
+  width: 74vw;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.skill-title {
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4em;
+  color: white;
+
+}
+
+.bar-container {
+  flex: 1;
+  background-color: #1E1E1E;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 30px;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 12px;
+  width: 0;
+  transition: width 1.5s ease;
+}
+
+.value {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-left: 20px;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  transition: left 1.5s ease;
+}
+
+.description-box {
+  width: 60vw;
+  border: solid 2px white;
+  margin-left: 20vw;
+  margin-top: 5vh;
+  padding: 20px;
+  color: white;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  border-radius: 5px;
+  min-height: 5vh;
+  max-height: 15vh;
+  display: flex;
+  align-items: center;
+}
+
+.description-box strong {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.description-box h3 {
+  width: 10vw;
+}
+
+#project {
+  width: 100vw;
+  height: 100vh;
+}
