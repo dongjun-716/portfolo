@@ -191,9 +191,72 @@
     </section>
     <!--Project-->
     <section id="project">
+      <div class="project-list">
+        <div class="project-sub" data-project="popup-turfsky">
+          <img src="img/TurfSky.png">
+        </div>
+        <div class="project-sub" style="border: solid 2px white;" data-project="popup-portfolio">
+          <img src="img/Portfolio.png">
+        </div>
+        <div class="project-sub">
+          <div class="loading-screen">
+            <div class="spinner"></div>
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+      </div>
+      <div class="project-list" style="padding-top: 8vh;">
+        <div class="project-sub">
+          <div class="loading-screen">
+            <div class="spinner"></div>
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+        <div class="project-sub">
+          <div class="loading-screen">
+            <div class="spinner"></div>
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+        <div class="project-sub">
+          <div class="loading-screen">
+            <div class="spinner"></div>
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+      </div>
 
+      <!-- Hidden popups -->
+      <div class="popup-content" id="popup-turfsky" style="display: none;">
+        <div class="slider-container">
+          <div class="slider">
+            <img src="img/TurfSky1.png">
+            <img src="img/TurfSky2.png">
+            <img src="img/TurfSky3.png">
+            <img src="img/TurfSky4.png">
+          </div>
+          <button class="prev"></button>
+          <button class="next"></button>
+        </div>
+        <h2>TurfSky Project</h2>
+        <p>A weather-based surfing app that shows real-time conditions.</p>
+      </div>
+      <div class="popup-content" id="popup-portfolio" style="display: none;">
+        <img src="img/PortfolioDetail.png" alt="Portfolio Detail">
+        <h2>Portfolio Project</h2>
+        <p>A personal website to showcase skills and projects.</p>
+      </div>
+
+      <!-- Popup Overlay -->
+      <div class="popup-overlay" style="display: none;">
+        <div class="popup-box">
+          <span class="close-popup">&times;</span>
+          <div id="popup-container"></div>
+        </div>
+      </div>
     </section>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>

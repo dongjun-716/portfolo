@@ -24,7 +24,7 @@ document.getElementById('container').addEventListener('wheel', (event) => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    
+
     const targetId = this.getAttribute('href');
     document.querySelector(targetId).scrollIntoView({
       behavior: 'smooth'
@@ -46,15 +46,15 @@ document.addEventListener("DOMContentLoaded", () => {
             bar.style.width = fillWidth;
 
             const value = bar.querySelector(".value");
-            value.textContent = fillWidth; 
-            value.style.left = fillWidth; 
+            value.textContent = fillWidth;
+            value.style.left = fillWidth;
           });
-          observer.disconnect(); 
+          observer.disconnect();
         }
       });
     },
     {
-      threshold: 1, 
+      threshold: 1,
     }
   );
 
@@ -72,4 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
       descriptionBox.innerHTML = description;
     });
   });
+});
+
+
+//팝업창 띄우기
+document.querySelectorAll('.project-sub').forEach(sub => {
+  sub.addEventListener('click', () => {
+    const popupId = sub.dataset.project;
+    const popupContent = document.getElementById(popupId).innerHTML;
+
+    const popupContainer = document.getElementById('popup-container');
+    popupContainer.innerHTML = popupContent;
+
+    document.querySelector('.popup-overlay').style.display = 'flex';
+  });
+});
+
+document.querySelector('.close-popup').addEventListener('click', () => {
+  document.querySelector('.popup-overlay').style.display = 'none';
+  document.getElementById('popup-container').innerHTML = ''; // Reset content
+});
+
+document.querySelector('.popup-overlay').addEventListener('click', (e) => {
+  if (e.target === document.querySelector('.popup-overlay')) {
+    document.querySelector('.popup-overlay').style.display = 'none';
+    document.getElementById('popup-container').innerHTML = ''; // Reset content
+  }
 });

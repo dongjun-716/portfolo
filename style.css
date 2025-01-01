@@ -301,3 +301,134 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.project-list {
+  padding-top: 23vh;
+  padding-left: 12vw;
+  display: flex;
+}
+
+.project-sub {
+  width: 23vw;
+  height: 30vh;
+  margin: 0 1.5vw;
+  border-radius: 20px;
+}
+
+.project-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+ .loading-screen {
+  position: relative;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border: solid 2px white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3); 
+  border-top: 5px solid #ffffff; 
+  border-radius: 50%;
+  animation: spin 10s linear infinite; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-screen h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5em;
+  color: white;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-box {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80vw;
+  height: 90vh;
+  position: relative;
+}
+
+.popup-box img {
+  border-radius: 8px;
+}
+
+.popup-box h2 {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.popup-box p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.slider-container {
+  position: relative;
+  width: 80vw;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+}
+
+.slider img {
+  width: 50vw;
+  height: 50vh;
+  object-fit: fill;
+  flex-shrink: 0;
+}
