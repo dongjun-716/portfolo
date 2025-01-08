@@ -382,8 +382,8 @@ body {
   background: white;
   border-radius: 8px;
   padding: 20px;
-  width: 80vw;
-  height: 90vh;
+  width: 1230px;
+  height: 710px;
   position: relative;
 }
 
@@ -412,23 +412,23 @@ body {
   color: black;
 }
 
-.slider-container {
+.mobile-slider-container {
   position: relative;
-  width: 80vw;
-  height: 50vh;
+  width: 340px;
+  height: 720px;
   overflow: hidden;
   border-radius: 20px;
-  align-items: center;
-  justify-content: center;
 }
 
-.slider {
+.mobile-slider {
   display: flex;
+  width: 340px;
+  height: 710px;
 }
 
-.slider img {
-  width: 50vw;
-  height: 50vh;
-  object-fit: fill;
-  flex-shrink: 0;
+.mobile-slider img {
+  height: 100%;
+  border: solid 4px black;
+  border-radius: 20px;
+  margin: 0 4px;
 }
